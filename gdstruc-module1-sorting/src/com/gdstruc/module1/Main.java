@@ -22,10 +22,13 @@ public class Main {
         System.out.println("\n\nArranging using bubble sort in descending order: ");
         printArrayElements(numbers);
 
-        selectionSort(numbers);
-        System.out.println("\n\nArranging using selection sort in ascending order: ");
+        selectionSortBig(numbers);
+        System.out.println("\n\nArranging using selection sort in descending order: ");
         printArrayElements(numbers);
 
+        selectionSortSmol(numbers);
+        System.out.println("\n\nArranging using selection sort in descending order but looking for the smallest value first and putting it at the end");
+        printArrayElements(numbers);
     }
 
     private static void bubbleSort(int arr[])
@@ -44,14 +47,14 @@ public class Main {
         }
     }
 
-    private static void selectionSort(int[] arr)
+    private static void selectionSortBig(int[] arr)
     {
         for(int lastSortedIndex = arr.length-1;lastSortedIndex>0;lastSortedIndex--)
         {
-            int largestIndex = 0;
-            for(int i = 0; i<lastSortedIndex;i++)
+            int largestIndex =  0;
+            for(int i=0; i<=lastSortedIndex;i++)
             {
-                if(arr[i]>arr[largestIndex])
+                if(arr[i]<arr[largestIndex])
                 {
                     largestIndex = i;
                 }
@@ -59,6 +62,24 @@ public class Main {
             int temp = arr[lastSortedIndex];
             arr[lastSortedIndex] = arr[largestIndex];
             arr[largestIndex] = temp;
+        }
+    }
+
+    private static void selectionSortSmol(int[] arr)
+    {
+        for(int lastSortedIndex = arr.length-1;lastSortedIndex>0;lastSortedIndex--)
+        {
+            int smallestIndex = lastSortedIndex;
+            for(int i=0; i<=lastSortedIndex;i++)
+            {
+                if(arr[i]<arr[smallestIndex])
+                {
+                    smallestIndex=i;
+                }
+            }
+            int temp = arr[lastSortedIndex];
+            arr[lastSortedIndex] = arr[smallestIndex];
+            arr[smallestIndex] = temp;
         }
     }
 
