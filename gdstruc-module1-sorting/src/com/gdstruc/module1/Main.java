@@ -26,21 +26,21 @@ public class Main {
         System.out.println("\n\nArranging using selection sort in descending order: ");
         printArrayElements(numbers);
 
-        selectionSortSmol(numbers);
+        selectionSortSmall(numbers);
         System.out.println("\n\nArranging using selection sort in descending order but looking for the smallest value first and putting it at the end");
         printArrayElements(numbers);
     }
 
     private static void bubbleSort(int arr[])
     {
-        for(int lastSortedIndex = arr.length-1;lastSortedIndex>0;lastSortedIndex--)
+        for(int lastSortedIndex = arr.length - 1; lastSortedIndex > 0; lastSortedIndex--)
         {
-            for(int i=0;i<lastSortedIndex;i++)
+            for(int i = 0; i < lastSortedIndex; i++)
             {
-                if(arr[i]<arr[i+1])
+                if(arr[i] < arr[i + 1])
                 {
-                    int temp = arr[i+1];
-                    arr[i+1] = arr[i];
+                    int temp = arr[i + 1];
+                    arr[i + 1] = arr[i];
                     arr[i] = temp;
                 }
             }
@@ -49,12 +49,12 @@ public class Main {
 
     private static void selectionSortBig(int[] arr)
     {
-        for(int lastSortedIndex = arr.length-1;lastSortedIndex>0;lastSortedIndex--)
+        for(int lastSortedIndex = arr.length - 1; lastSortedIndex > 0; lastSortedIndex--)
         {
             int largestIndex =  0;
-            for(int i=0; i<=lastSortedIndex;i++)
+            for(int i = 0; i <= lastSortedIndex; i++)
             {
-                if(arr[i]<arr[largestIndex])
+                if(arr[i] < arr[largestIndex])
                 {
                     largestIndex = i;
                 }
@@ -65,16 +65,16 @@ public class Main {
         }
     }
 
-    private static void selectionSortSmol(int[] arr)
+    private static void selectionSortSmall(int[] arr)
     {
-        for(int lastSortedIndex = arr.length-1;lastSortedIndex>0;lastSortedIndex--)
+        for(int lastSortedIndex = arr.length - 1; lastSortedIndex > 0; lastSortedIndex--)
         {
             int smallestIndex = lastSortedIndex;
-            for(int i=0; i<=lastSortedIndex;i++)
+            for(int i = 0; i <= lastSortedIndex; i++)
             {
-                if(arr[i]<arr[smallestIndex])
+                if(arr[i] < arr[smallestIndex])
                 {
-                    smallestIndex=i;
+                    smallestIndex = i;
                 }
             }
             int temp = arr[lastSortedIndex];
