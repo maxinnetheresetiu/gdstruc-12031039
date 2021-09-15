@@ -1,4 +1,4 @@
-package com.gdstruc.module2part2;
+package com.gdstruc.quiz2;
 
 public class PlayerLinkedList {
     private PlayerNode head;
