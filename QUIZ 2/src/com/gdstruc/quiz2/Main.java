@@ -16,6 +16,7 @@ public class Main {
         playerLinkedList.addToFront(asuna);
         playerLinkedList.addToFront(heathcliff);
 
+        playerLinkedList.removeFirstElement();
         playerLinkedList.printList();
 
     }

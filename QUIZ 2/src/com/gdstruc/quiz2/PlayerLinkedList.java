@@ -22,4 +22,11 @@ public class PlayerLinkedList {
         }
         System.out.println("null");
     }
+
+    public void removeFirstElement()
+    {
+        PlayerNode current = head;
+        current = current.getNextPlayer();
+        current = head;
+    }
 }
