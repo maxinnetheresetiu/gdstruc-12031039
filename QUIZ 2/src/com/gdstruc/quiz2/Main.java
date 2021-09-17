@@ -1,5 +1,7 @@
 package com.gdstruc.quiz2;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -16,8 +18,15 @@ public class Main {
         playerLinkedList.addToFront(asuna);
         playerLinkedList.addToFront(heathcliff);
 
+        //removing the first element
         playerLinkedList.removeFirstElement();
         playerLinkedList.printList();
+
+        playerLinkedList.countElement();
+
+        Scanner userInput = new Scanner(System.in);
+        
+
 
     }
 }

@@ -2,6 +2,7 @@ package com.gdstruc.quiz2;
 
 public class PlayerLinkedList {
     private PlayerNode head;
+    public int size;
 
     public void addToFront(Player player)
     {
@@ -26,7 +27,24 @@ public class PlayerLinkedList {
     public void removeFirstElement()
     {
         PlayerNode current = head;
-        current = current.getNextPlayer();
-        current = head;
+        head = head.getNextPlayer();
+        current = null;
+    }
+
+    public void countElement()
+    {
+        PlayerNode current = head;
+        size = 0;
+        while(current != null)
+        {
+            size++;
+            current = current.getNextPlayer();
+        }
+        System.out.println("size = " + size);
+    }
+
+    public boolean contains()
+    {
+        PlayerNode
     }
 }
