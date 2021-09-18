@@ -25,7 +25,21 @@ public class Main {
         playerLinkedList.countElement();
 
         Scanner userInput = new Scanner(System.in);
-        
+
+        /*String name;
+        System.out.println("Check if player is in the linked list.");
+        System.out.println("id: ");
+        int id = userInput.nextInt();
+        System.out.println("name: ");
+        name = userInput.nextLine();
+        System.out.println("level: ");
+        int level = userInput.nextInt();*/
+
+        int idT = 2;
+        String nameT = "Asuna";
+        int levelT = 41;
+
+        playerLinkedList.contains(idT, nameT, levelT);
 
 
     }

@@ -43,8 +43,17 @@ public class PlayerLinkedList {
         System.out.println("size = " + size);
     }
 
-    public boolean contains()
+    public void contains(int id, String name, int level)
     {
-        PlayerNode
+        PlayerNode current = head;
+        while(current != null)
+        {
+            if(current.getPlayer().getId() == id && current.getPlayer().getName() == name && current.getPlayer().getLevel() == level)
+            {
+                System.out.println("True");
+            }
+            current = current.getNextPlayer();
+        }
+        System.out.println("False");
     }
 }
