@@ -45,15 +45,20 @@ public class PlayerLinkedList {
 
     public void contains(int id, String name, int level)
     {
+        int i = 0;
         PlayerNode current = head;
         while(current != null)
         {
             if(current.getPlayer().getId() == id && current.getPlayer().getName() == name && current.getPlayer().getLevel() == level)
             {
                 System.out.println("True");
+                i = 1;
             }
             current = current.getNextPlayer();
         }
-        System.out.println("False");
+        if(i == 0)
+        {
+            System.out.println("False");
+        }
     }
 }
