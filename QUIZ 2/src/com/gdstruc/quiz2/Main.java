@@ -34,7 +34,7 @@ public class Main {
         System.out.println("level: ");
         int level = userInput.nextInt();
 
-        playerLinkedList.contains(id, name, level );
+        playerLinkedList.contains(id, name, level);
 
 
     }
