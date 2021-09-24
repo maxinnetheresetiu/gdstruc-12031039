@@ -43,18 +43,35 @@ public class PlayerLinkedList {
         System.out.println("size = " + size);
     }
 
-    public void contains(int id, String name, int level)
+    public boolean contains(Player player)
     {
         PlayerNode current = head;
         while(current != null)
         {
-            if((id == current.getPlayer().getId()) && (name == current.getPlayer().getName()) && (level == current.getPlayer().getLevel()))
+            if(current.equals(player))
             {
-                System.out.println("True");
-                return;
+                return true;
+            }
+            else
+            {
+                current = current.getNextPlayer();
+            }
+        }
+        return false;
+    }
+
+    public void indexOf(Player player)
+    {
+        int x = 0;
+        PlayerNode current = head;
+        while(current != null)
+        {
+            if(current.equals(player))
+            {
+                System.out.println(x);
             }
             current = current.getNextPlayer();
+            x++;
         }
-        System.out.println("false");
     }
 }

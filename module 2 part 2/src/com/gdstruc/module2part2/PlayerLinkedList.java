@@ -21,5 +21,5 @@ public class PlayerLinkedList {
             current = current.getNextPlayer();
         }
         System.out.println("null");
-    }
+    }   
 }

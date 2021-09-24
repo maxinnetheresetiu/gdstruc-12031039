@@ -22,19 +22,13 @@ public class Main {
         playerLinkedList.removeFirstElement();
         playerLinkedList.printList();
 
+        playerLinkedList.contains(heathcliff);
+        playerLinkedList.indexOf(heathcliff);
         playerLinkedList.countElement();
 
-        Scanner userInput = new Scanner(System.in);
 
-        System.out.println("Check if player is in the linked list.");
-        System.out.println("id: ");
-        int id = userInput.nextInt();
-        System.out.println("name: ");
-        String name = new Scanner(System.in).nextLine();
-        System.out.println("level: ");
-        int level = userInput.nextInt();
 
-        playerLinkedList.contains(id, name, level);
+
 
 
     }

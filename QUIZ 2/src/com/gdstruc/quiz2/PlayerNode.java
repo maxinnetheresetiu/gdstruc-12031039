@@ -4,6 +4,7 @@ public class PlayerNode {
     private Player player;
     private PlayerNode nextPlayer;
 
+
     public PlayerNode(Player player) {
         this.player = player;
     }
