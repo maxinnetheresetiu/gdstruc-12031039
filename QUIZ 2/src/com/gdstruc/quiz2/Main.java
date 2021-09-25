@@ -22,9 +22,9 @@ public class Main {
         playerLinkedList.removeFirstElement();
         playerLinkedList.printList();
 
-        playerLinkedList.contains(heathcliff);
-        playerLinkedList.indexOf(heathcliff);
-        playerLinkedList.countElement();
+        System.out.println("Linked list contains Asuna: " + playerLinkedList.contains(asuna));
+        System.out.println("Index of Asuna in the linked list: " + playerLinkedList.indexOf(asuna));
+        System.out.println("Size = " + playerLinkedList.getSize());
 
 
 

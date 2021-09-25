@@ -31,7 +31,7 @@ public class PlayerLinkedList {
         current = null;
     }
 
-    public void countElement()
+    public int getSize()
     {
         PlayerNode current = head;
         size = 0;
@@ -40,7 +40,7 @@ public class PlayerLinkedList {
             size++;
             current = current.getNextPlayer();
         }
-        System.out.println("size = " + size);
+        return size;
     }
 
     public boolean contains(Player player)
@@ -48,7 +48,7 @@ public class PlayerLinkedList {
         PlayerNode current = head;
         while(current != null)
         {
-            if(current.equals(player))
+            if(current.getPlayer().equals(player))
             {
                 return true;
             }
@@ -60,18 +60,19 @@ public class PlayerLinkedList {
         return false;
     }
 
-    public void indexOf(Player player)
+    public int indexOf(Player player)
     {
         int x = 0;
         PlayerNode current = head;
         while(current != null)
         {
-            if(current.equals(player))
+            if(current.getPlayer().equals(player))
             {
-                System.out.println(x);
+                return x;
             }
             current = current.getNextPlayer();
             x++;
         }
+        return -1;
     }
 }
