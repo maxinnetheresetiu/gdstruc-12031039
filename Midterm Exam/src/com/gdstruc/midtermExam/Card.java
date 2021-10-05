@@ -1,5 +1,7 @@
 package com.gdstruc.midtermExam;
 
+import java.util.Objects;
+
 public class Card {
     private int id;
     private String name;
@@ -25,6 +27,16 @@ public class Card {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Card card = (Card) o;
+        return id == card.id && Objects.equals(name, card.name);
+    }
 
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
+    }
 }

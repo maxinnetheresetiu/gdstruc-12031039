@@ -18,6 +18,7 @@ public class Main {
 
         //access an element
 //        System.out.println(playerList.get(1));
+        
 
         //add element
         playerList.add(3, new Player(4, "o di kaya", 21));
