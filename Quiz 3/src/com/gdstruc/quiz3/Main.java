@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
 
     // Getting random number of players
-    public static int gettingNumOfPlayers()
+    public static int generateRandomPlayerCount()
     {
         Random rand = new Random();
         int randomNumberOfPlayers = rand.nextInt(7);
@@ -44,43 +44,38 @@ public class Main {
         int game = 0;
         while(game < 10)
         {
+            int x = generateRandomPlayerCount();
+
             System.out.println("Getting players...");
-            while(queue.size() < 5)
+            for (int i = 0; i < x; i++)
             {
-                for (int i = 0; i < gettingNumOfPlayers(); i++)
-                {
-                    Player player = playerQueue.dequeue();
-                    queue.enqueue(player);
-                }
-
-                if(queue.size() < 5)
-                {
-                    System.out.println("There are " + queue.size() + " players in the queue. Getting another random number of players.");
-                   pause.nextLine();
-                }
+                Player player = playerQueue.dequeue();
+                queue.enqueue(player);
             }
 
             System.out.println("Current queue:");
             queue.printQueue();
             pause.nextLine();
 
-            System.out.println("Starting the game!!");
-            int round = game + 1;
-            System.out.println("ROUND " + round);
-            pause.nextLine();
-            System.out.println("Popping 5 players from queue...");
-            for(int i = 0; i < 5; i++)
+            if (queue.size() >= 5)
             {
-                Player player = queue.dequeue();
-                playerQueue.enqueue(player);
+                System.out.println("Starting the game!!");
+                int round = game + 1;
+                System.out.println("ROUND " + round);
+                pause.nextLine();
+                System.out.println("Popping 5 players from queue...");
+                for (int i = 0; i < 5; i++)
+                {
+                    Player player = queue.dequeue();
+                    playerQueue.enqueue(player);
+                }
+                System.out.println("Current queue:");
+                queue.printQueue();
+                pause.nextLine();
+                game++;
             }
-
-            System.out.println("Current queue:");
-            queue.printQueue();
-            pause.nextLine();
-
-            game++;
         }
+
         System.out.println("Game ended!!");
     }
 
