@@ -24,6 +24,14 @@ public class Tree {
         }
     }
 
+    public void traverseInOrderDescending()
+    {
+        if (root != null)
+        {
+            root.traverseInOrderDescending();
+        }
+    }
+
     public Node get(int value)
     {
         if (root != null)
@@ -37,7 +45,16 @@ public class Tree {
     {   
         if(root != null)
         {
-            return root.getMin(root);
+            return root.getMin();
+        }
+        return null;
+    }
+
+    public Node getMax()
+    {
+        if(root != null)
+        {
+            return root.getMax();
         }
         return null;
     }

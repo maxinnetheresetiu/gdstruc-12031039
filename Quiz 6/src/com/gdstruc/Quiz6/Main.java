@@ -13,10 +13,19 @@ public class Main {
         tree.insert(-44);
         tree.insert(-13);
         tree.insert(23);
+        tree.insert(-100);
 
-        //tree.traverseInOrder();
+        System.out.println("In ascending order:");
+        tree.traverseInOrder();
+        System.out.println();
+        System.out.println("In descending order:");
+        tree.traverseInOrderDescending();
+        System.out.println();
 
-        System.out.println(tree.get(23));
-        System.out.println(tree.getMin());
+        //System.out.println(tree.get(23));
+        System.out.println("The least value in the tree is " + tree.getMin());
+        System.out.println("The greatest value in the tree is " + tree.getMax());
+
+
     }
 }
